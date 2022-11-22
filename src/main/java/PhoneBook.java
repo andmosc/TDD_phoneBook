@@ -12,4 +12,8 @@ public class PhoneBook {
     public String printAllNames() {
         return phoneBook.keySet().toString();
     }
+
+    public String findByNumber(String number) {
+        return null;
+    }
 }

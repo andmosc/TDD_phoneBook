@@ -36,4 +36,15 @@ class PhoneBookTest {
         assertEquals("[a, b, c, d]", phoneBook.printAllNames(),"method should return names in alphabetical order");
     }
 
+    @Test
+    @DisplayName("findByNumber()")
+    public void findByNumberTest_finds_name_by_number() {
+        String expected = "Victor";
+        phoneBook.add("Anton", "1231");
+        phoneBook.add("Victor", "4321");
+        phoneBook.add("Max", "21");
+
+        assertEquals(expected,phoneBook.findByNumber("4321"),"method should finds name by number");
+    }
+
 }
