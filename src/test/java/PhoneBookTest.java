@@ -24,4 +24,16 @@ class PhoneBookTest {
 
         assertEquals(expected, phoneBook.add("Max", "1245454566"),"method should return the number of contacts after adding(Not Repeating)");
     }
+
+    @Test
+    @DisplayName("Test method-printAllNames()")
+    public void printAllNamesTest_prints_all_names_in_alphabetical_order() {
+        phoneBook.add("a", "1324234553523");
+        phoneBook.add("c", "1342345235225");
+        phoneBook.add("d", "122354235232");
+        phoneBook.add("b", "1223523523451");
+
+        assertEquals("[a, b, c, d]", phoneBook.printAllNames(),"method should return names in alphabetical order");
+    }
+
 }
