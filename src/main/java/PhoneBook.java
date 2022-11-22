@@ -10,8 +10,6 @@ public class PhoneBook {
         return phoneBook.size();
     }
     public String printAllNames() {
-        return null;
+        return phoneBook.keySet().toString();
     }
-
-
 }
