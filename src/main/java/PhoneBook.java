@@ -14,6 +14,12 @@ public class PhoneBook {
     }
 
     public String findByNumber(String number) {
+        Set<String> nameKey = phoneBook.keySet();
+        for (String name : nameKey) {
+            if (phoneBook.get(name).equals(number)){
+                return name;
+            }
+        }
         return null;
     }
 }
