@@ -47,4 +47,14 @@ class PhoneBookTest {
         assertEquals(expected,phoneBook.findByNumber("4321"),"method should finds name by number");
     }
 
+    @Test
+    @DisplayName("findByName()")
+    public void findByNameTest_finds_number_by_name() {
+        String expected = "4321";
+        phoneBook.add("Anton", "1231");
+        phoneBook.add("Victor", "4321");
+        phoneBook.add("Max", "21");
+
+        assertEquals(expected,phoneBook.findByName("Victor"),"method should finds number by name");
+    }
 }
